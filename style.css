@@ -32,12 +32,38 @@ body {
     flex: 1;
     flex-direction: column;
 }
-
+.about {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    flex: 1;
+    flex-direction: column;
+}
 p {
     color: #F4EEE0;
     font-size: 4vw;
     float: left;
 }
+
+.norm {
+    color: #F4EEE0;
+    font-size: 150%;
+    padding: 4vw;
+}
+
 b {
     color: #e0e6f4;
     font-size: 4.5vw;
@@ -58,7 +84,7 @@ b {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
-
+    text-align: center;
 }
 
 button {
