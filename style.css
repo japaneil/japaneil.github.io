@@ -52,6 +52,42 @@ body {
     flex: 1;
     flex-direction: column;
 }
+.about_txt {
+    text-align: left;
+    display: flex;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    flex: 1;
+    flex-direction: column;
+}
+.about_pic {
+    text-align: left;
+    display: flex;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    flex: 1;
+    flex-direction: column;
+}
 p {
     color: #F4EEE0;
     font-size: 4vw;
