@@ -1,7 +1,7 @@
 # My Portfolio 📕
 This is my Personal Portfolio.
 
-Made by <b>[Japaneil](https://github.com/japaneil)</
+Made by <b>[Japaneil](https://github.com/japaneil)
 
 This code is [Licensed](LICENSE) under the MIT License.
 
