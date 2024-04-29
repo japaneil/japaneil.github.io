@@ -6,10 +6,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
-    padding: 100px;
+    padding: 10%;
     background-color: #393646;
     font-family: "Questrial", sans-serif;
     }
+
+    img {
+      display: inline-block;
+      width: auto; 
+      height: 5vw;
+      vertical-align: middle;
+      margin: 0 auto;
+  }
+  
+  @media (max-width: 600px) {
+    img {
+      height: 15vw;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .norm {
+      color: #F4EEE0;
+      font-size: 2vw;
+  }
+  }
 
 .full {
     text-align: left;
@@ -90,14 +114,13 @@ body {
 }
 p {
     color: #F4EEE0;
-    font-size: 4vw;
+    font-size: 150%;
     float: left;
 }
 
 .norm {
     color: #F4EEE0;
-    font-size: 150%;
-    padding: 4vw;
+    font-size: 2.5vw;
 }
 
 b {
