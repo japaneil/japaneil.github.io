@@ -28,12 +28,7 @@ body {
     }
   }
 
-  @media (max-width: 650px) {
-    .norm {
-      color: #F4EEE0;
-      font-size: 2vw;
-  }
-  }
+
 
 .full {
     text-align: left;
@@ -114,7 +109,7 @@ body {
 }
 p {
     color: #F4EEE0;
-    font-size: 150%;
+    font-size: 350%;
     float: left;
 }
 
