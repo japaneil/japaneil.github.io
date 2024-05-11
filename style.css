@@ -12,7 +12,7 @@ body {
     font-family: "Questrial", sans-serif;
     }
 
-    .skill {
+    img {
       display: inline-block;
       width: auto; 
       height: 5vw;
@@ -21,7 +21,7 @@ body {
   }
   
   @media (max-width: 600px) {
-    .skill {
+    img {
       height: 15vw;
       padding: 15px;
       display: flex;
