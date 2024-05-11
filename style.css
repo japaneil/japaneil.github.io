@@ -4,14 +4,15 @@
     }
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url('//fonts.googleapis.com/css?family=Roboto:500');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 body {
     padding: 10%;
     background-color: #393646;
     font-family: "Questrial", sans-serif;
     }
 
-    img {
+    .skill {
       display: inline-block;
       width: auto; 
       height: 5vw;
@@ -20,7 +21,7 @@ body {
   }
   
   @media (max-width: 600px) {
-    img {
+    .skill {
       height: 15vw;
       padding: 15px;
       display: flex;
@@ -181,6 +182,7 @@ button {
     cursor: pointer;
     font-size: 30%;
 }
+
 .resume {
   border-radius: 12px;
   border: 2px solid #e0e6f4;
@@ -189,7 +191,7 @@ button {
   color: #F4EEE0;
   padding: 15px 24px;
   cursor: pointer;
-  font-size: 20%;
+  font-size: 25%;
 }
 button:hover {
     background-color: #F4EEE0;
@@ -547,4 +549,23 @@ p {
   .nav ul li a{
     font-size: 4.5vh;
   }
+}
+
+.fixedButton{
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  padding: 20px;
+}
+.roundedFixedBtn{
+height: 60px;
+line-height: 80px;  
+width: 60px;  
+font-size: 2em;
+font-weight: bold;
+border-radius: 50%;
+background-color: #F4EEE0;
+color: white;
+text-align: center;
+cursor: pointer;
 }
