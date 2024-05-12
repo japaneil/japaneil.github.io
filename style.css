@@ -6,11 +6,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @import url('//fonts.googleapis.com/css?family=Roboto:500');
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
-body {
+.bodnorm {
     padding: 10%;
     background-color: #393646;
     font-family: "Questrial", sans-serif;
     }
+.err {
+  body {
+    padding: 10%;
+    background-color: #ffffff;
+    font-family: "Questrial", sans-serif;
+    }
+}
 
     img {
       display: inline-block;
@@ -172,13 +179,24 @@ b {
 }
 
 
-button {
+.normbutton {
     border-radius: 12px;
     border: 2px solid #e0e6f4;
     transition-duration: 0.4s;
     background-color: #393646;
     color: #F4EEE0;
     padding: 15px 24px;
+    cursor: pointer;
+    font-size: 30%;
+}
+
+.resbut {
+    border-radius: 100%;
+    border: 2px solid #e0e6f4;
+    transition-duration: 0.4s;
+    background-color: #F4EEE0;
+    color: #ffffff;
+    /* padding: 15px 24px; */
     cursor: pointer;
     font-size: 30%;
 }
@@ -193,10 +211,15 @@ button {
   cursor: pointer;
   font-size: 25%;
 }
-button:hover {
+.normbutton:hover {
     background-color: #F4EEE0;
     color: #393646;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.resbut:hover {
+  background-color: #F4EEE0;
+  color: #393646;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .resume:hover {
   background-color: #F4EEE0;
@@ -204,7 +227,7 @@ button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 @media only screen and (max-width: 768px) {
-  button {
+  .normbutton {
     border-radius: 12px;
     border: 2px solid #e0e6f4;
     transition-duration: 0.4s;
@@ -213,6 +236,16 @@ button:hover {
     padding: 5px 14px;
     cursor: pointer;
     font-size: 70%;
+}
+.resbut {
+  border-radius: 100%;
+  border: 2px solid #e0e6f4;
+  transition-duration: 0.4s;
+  background-color: #F4EEE0;
+  color: #e0e6f4;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 70%;
 }
 .resume {
   border-radius: 12px;
@@ -563,9 +596,95 @@ line-height: 80px;
 width: 60px;  
 font-size: 2em;
 font-weight: bold;
-border-radius: 50%;
+border-radius: 100%;
 background-color: #F4EEE0;
 color: white;
 text-align: center;
 cursor: pointer;
+}
+
+.fundo{
+  animation: scales 3s alternate  infinite;
+  transform-origin: center;
+}
+.pao-baixo{
+   animation: rotatepao 14s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.pao-cima{
+   animation: rotatepao 7s 1s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+
+.left-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 150px 156px;
+}
+
+.right-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 310px 150px;
+}
+
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+@keyframes scales{
+  from { transform: scale(0.98)}
+  to{ transform: scale(1)}
+}
+
+@keyframes rotatepao{
+  0% { transform:  rotate(0deg)}
+  50% , 60%{ transform:  rotate(-20deg)}
+  100%{  transform:  rotate(0deg) }
+ 
+}
+
+@keyframes olhos{
+  0%{
+    transform: rotateX(0deg);
+  }
+   100%{
+    transform: rotateX(30deg);
+  }
+}
+
+@keyframes left-sparks{
+  0%{
+    opacity: 0; 
+  }
+  
+}
+
+
+.main{
+  
+  min-height: 600px;
+  margin: 0px auto;
+  width: auto;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 4s   alternate infinite;
+}
+
+@keyframes dash{
+   0%, 30%{
+     fill: 4B4B62;
+    stroke-dashoffset:   0;
+  }
+   80%,100%{
+     fill: transparent;
+    stroke-dashoffset:  -200;
+  }
+   
+  
 }
