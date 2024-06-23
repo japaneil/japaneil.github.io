@@ -12,3 +12,5 @@ Hosted using <b>Firebase</b> at <b>[https://japaneil.github.io/](https://www.nei
 - CSS
 - Google Fonts
 - Github Pages
+- Cloudflare
+- Firebase
