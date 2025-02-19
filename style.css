@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('//fonts.googleapis.com/css?family=Roboto:500');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 @keyframes textclip {
     to {
         background-position: 200% center;
     }
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-@import url('//fonts.googleapis.com/css?family=Roboto:500');
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 .bodnorm {
     padding: 10%;
     background-color: #393646;
@@ -679,4 +679,136 @@ cursor: pointer;
   }
    
   
+}
+
+/* Contact Form Styles (Additions) */
+
+/* Contact Form Wrapper */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 20px;
+  background: #f0f0f0;
+  box-sizing: border-box; /* To ensure padding doesn't affect layout */
+}
+
+/* Contact Form */
+.form-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Reduced max-width */
+}
+
+/* Heading Style */
+.form-wrapper h2 {
+  text-align: center;
+  font-size: 1.8rem; /* Adjusted font size */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Subheading Style */
+.subheading {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Input Styles */
+.input-group {
+  margin-bottom: 15px; /* Reduced margin for a more compact form */
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px; /* Adjusted padding */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus Effect */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #ff6a00;
+}
+
+/* Textarea Styling */
+textarea {
+  height: 120px; /* Slightly reduced height */
+  resize: none;
+}
+
+/* Button Style */
+.btn {
+  width: 100%;
+  background: #ff6a00;
+  color: #fff;
+  padding: 12px;
+  font-size: 1.1rem; /* Slightly reduced font size */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #ee0979;
+  transform: scale(1.05);
+}
+
+/* Response Message Style */
+#response-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Success/Failure Response */
+#response-message.success {
+  color: #28a745;
+}
+
+#response-message.error {
+  color: #dc3545;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+      padding: 25px;
+      max-width: 100%; /* Ensures the form takes full width on smaller screens */
+  }
+
+  h2 {
+      font-size: 1.6rem; /* Adjust heading size */
+  }
+
+  .subheading {
+      font-size: 0.9rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+      padding: 10px; /* Reduced padding for inputs */
+  }
+
+  .btn {
+      font-size: 1rem; /* Smaller button font size */
+      padding: 10px; /* Adjusted padding for buttons */
+  }
 }

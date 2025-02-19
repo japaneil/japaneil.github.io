@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/jpg" href="my_photo.png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Questrial&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Neil Arora.</title>
+    <title>Contact | Neil Arora.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="my_photo.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body class="bodnorm">
-    <div>
-    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-        <label for="menu-icon"></label>
-        <nav class="nav"> 		
-            <ul class="pt-5">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="https://logs.neilarora.in/">Devlogs</a></li>
-            </ul>
-        </nav>
+
+    <input class="menu-icon" type="checkbox" id="menu-icon">
+    <label for="menu-icon" class="menu-label"></label>
+
+    <nav class="nav"> 		
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://logs.neilarora.in/">Devlogs</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+        <div class="form-wrapper">
+            <h2>Contact Us</h2>
+            <p class="subheading">We'd love to hear from you!</p>
+            <form id="contact-form" action="https://formspree.io/f/meoevewa" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <p id="response-message"></p>
+            </form>
+        </div>
     </div>
 
-    <div class="visme_d" data-title="Contact Me Contact Form" data-url="76n873xx-contact-me-contact-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="60395"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    <script src="script.js"></script>
 
 </body>
-</html> 
+</html>
