@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Questrial&display=swap" rel="stylesheet">
+
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="bodnorm">
 
@@ -26,7 +29,7 @@
     <div class="contact-container">
         <div class="form-wrapper">
             <h2>Contact Us</h2>
-            <p class="subheading">We'd love to hear from you!</p>
+            <p class="subheading">I'd love to hear from you!</p>
             <form id="contact-form" action="https://formspree.io/f/meoevewa" method="POST">
                 <div class="input-group">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -37,6 +40,10 @@
                 <div class="input-group">
                     <textarea name="message" placeholder="Your Message" required></textarea>
                 </div>
+
+                <!-- reCAPTCHA v2 Checkbox -->
+                <div class="g-recaptcha" data-sitekey="6LeWkNsqAAAAAPW3JgEsRa1Laio000EsTW-kUseG"></div>
+
                 <button type="submit" class="btn">Send Message</button>
                 <p id="response-message"></p>
             </form>
