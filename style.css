@@ -820,6 +820,23 @@ textarea {
       font-size: 1rem; /* Smaller button font size */
       padding: 10px; /* Adjusted padding for buttons */
   }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 30px;
+    background: transparent;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    flex: 1;
+    flex-direction: column;
+    position: absolute;
+  }
 }
 
 /* Scroll Indicator */
