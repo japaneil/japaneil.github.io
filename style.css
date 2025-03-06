@@ -786,8 +786,15 @@ textarea {
 @media screen and (max-width: 768px) {
   .form-wrapper {
       padding: 25px;
-      max-width: 100%; /* Ensures the form takes full width on smaller screens */
+      max-width: 90%; /* Ensures the form takes full width on smaller screens */
   }
+  
+  .g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+}
 
   h2 {
       font-size: 1.6rem; /* Adjust heading size */
@@ -846,10 +853,12 @@ textarea {
 /* Showcase Section */
 .showcase {
   background-color: #2E2B3A;
-  padding: 60px 10%;
+  padding: 20px 10%;
+  border-radius: 10px;
+}
+.showcase h4{
   text-align: center;
 }
-
 .showcase h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -866,10 +875,8 @@ textarea {
   background: #222;
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
   transition: transform 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
 }
 
 .achievement:hover {
@@ -905,5 +912,8 @@ textarea {
   }
   .achievement img {
       max-width: 75%;
+}
+.achievement p {
+  font-size: 1rem;
 }
 }
