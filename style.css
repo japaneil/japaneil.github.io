@@ -588,7 +588,7 @@ p {
     color: #ffeba7;
   }
   .nav ul li a{
-    font-size: 4.5vh;
+    font-size: 5.5vh;
   }
 }
 
@@ -1080,4 +1080,33 @@ textarea {
     font-size: 0.8rem;
   }
 
+}
+
+footer {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  font-size: 5px;
+  color: #ffffff; /* Default icon color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.social-links a:hover {
+  color: #d299c2;
+}
+
+.social-links i {
+  font-size: 20px;
 }
