@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const animationSection = document.querySelector(".animation-section");
     const achievements = document.querySelectorAll(".achievement");
 
-    window.addEventListener("scroll", function() {
+    function checkVisibility() {
         let scrollPos = window.scrollY;
 
         // Hide scroll indicator when scrolling past 100px
@@ -66,8 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Trigger animation effect when entering the showcase
         if (scrollPos > animationSection.offsetTop - window.innerHeight / 1.5) {
-            animationSection.style.opacity = "1";
-            animationSection.style.transform = "translateY(0)";
+            animationSection.classList.add("visible");
         }
 
         // Animate showcase achievements on scroll
@@ -80,7 +79,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 achievement.style.transform = "translateY(0)";
             }
         });
-    });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Run on page load in case elements are already in view
 
     // Initial state for achievements
     achievements.forEach((achievement) => {

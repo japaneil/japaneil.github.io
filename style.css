@@ -28,12 +28,33 @@
   }
   
   @media (max-width: 600px) {
-    img {
-      height: 15vw;
-      padding: 15px;
+    .image {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      gap: 5px; /* Space between items */
     }
+    img {
+      height: 20vw;
+      padding: 0.1rem;
+      padding-bottom: 20%;
+  }
+  }
+
+  @media (max-width: 768px) {
+    .image {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      gap: 5px; /* Space between items */
+    }
+    img {
+      height: 10vw;
+      padding: 0.1rem;
+      padding-bottom: 20%;
+  }
+  .abnorm {
+    color: #F4EEE0;
+    font-size: 5%;
+  }
   }
 
 .full {
@@ -875,14 +896,70 @@ textarea {
 }
 
 /* Showcase Section */
+/* General Styles */
+/* body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Questrial", sans-serif;
+  background-color: #393646;
+  color: #F4EEE0;
+  overflow-x: hidden;
+} */
+
+/* Scroll Indicator */
+.scroll-indicator {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #F4EEE0;
+  animation: fade-in 2s infinite alternate;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+@keyframes fade-in {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* Apple-Style Animation Section */
+.animation-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #d299c2, #8ec5fc);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Showcase Section */
 .showcase {
   background-color: #2E2B3A;
-  padding: 60px 10%;
+  padding: 60px 5%;
   border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.showcase h4{
+
+.showcase h4 {
   text-align: center;
 }
+
 .showcase h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -890,9 +967,13 @@ textarea {
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
   align-items: center;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .achievement {
@@ -901,6 +982,13 @@ textarea {
   border-radius: 10px;
   transition: transform 0.3s;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .achievement:hover {
@@ -912,35 +1000,84 @@ textarea {
   border-radius: 10px;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .achievement p {
   font-size: 2rem;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .scroll-indicator {
-      font-size: 1rem;
-  }
-
-  .animation-section {
-      font-size: 1.5rem;
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+  .showcase {
+      padding: 50px 5%;
   }
 
   .showcase h2 {
       font-size: 2rem;
   }
+}
+
+@media (min-width: 2560px) {
+  .scroll-indicator {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase {
+      padding: 40px 5%;
+  }
+
+  .showcase-grid {
+      grid-template-columns: 1fr;
+  }
 
   .achievement {
-    max-width: 65%;
+      width: 90%;
+      max-width: 350px;
+      padding: 15px;
   }
-  .achievement img {
-      max-width: 75%;
+
+  .achievement img, .achievement video {
+      max-width: 100%;
+  }
+
+  .achievement p {
+      font-size: 1.5rem;
+  }
+  .scroll-indicator {
+    font-size: 1rem;
+  }
 }
-.achievement p {
-  font-size: 1rem;
+
+@media (max-width: 425px) {
+  .showcase {
+      padding: 20px 5%;
+  }
+
+  .achievement {
+      width: 100%;
+      max-width: 90%;
+      padding: 10px;
+      margin: 0 auto;
+  }
+
+  .achievement img{
+    width: 80%;
 }
-.showcase {
-  padding: 20px 10%;
-}
+
+
+  .achievement img, .achievement video {
+      max-width: 100%;
+  }
+
+  .achievement p {
+      font-size: 1rem;
+  }
+  .scroll-indicator {
+    font-size: 0.8rem;
+  }
+
 }
