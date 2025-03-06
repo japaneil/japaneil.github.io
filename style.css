@@ -853,7 +853,7 @@ textarea {
 /* Showcase Section */
 .showcase {
   background-color: #2E2B3A;
-  padding: 20px 10%;
+  padding: 60px 10%;
   border-radius: 10px;
 }
 .showcase h4{
@@ -915,5 +915,8 @@ textarea {
 }
 .achievement p {
   font-size: 1rem;
+}
+.showcase {
+  padding: 20px 10%;
 }
 }
