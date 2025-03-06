@@ -48,3 +48,44 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         responseMessage.style.opacity = 1;
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const scrollIndicator = document.querySelector(".scroll-indicator");
+    const animationSection = document.querySelector(".animation-section");
+    const achievements = document.querySelectorAll(".achievement");
+
+    window.addEventListener("scroll", function() {
+        let scrollPos = window.scrollY;
+
+        // Hide scroll indicator when scrolling past 100px
+        if (scrollPos > 100) {
+            scrollIndicator.style.opacity = "0";
+        } else {
+            scrollIndicator.style.opacity = "1";
+        }
+
+        // Trigger animation effect when entering the showcase
+        if (scrollPos > animationSection.offsetTop - window.innerHeight / 1.5) {
+            animationSection.style.opacity = "1";
+            animationSection.style.transform = "translateY(0)";
+        }
+
+        // Animate showcase achievements on scroll
+        achievements.forEach((achievement) => {
+            const position = achievement.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (position < windowHeight * 0.85) {
+                achievement.style.opacity = "1";
+                achievement.style.transform = "translateY(0)";
+            }
+        });
+    });
+
+    // Initial state for achievements
+    achievements.forEach((achievement) => {
+        achievement.style.opacity = "0";
+        achievement.style.transform = "translateY(30px)";
+        achievement.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    });
+});

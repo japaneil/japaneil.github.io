@@ -807,3 +807,103 @@ textarea {
       padding: 10px; /* Adjusted padding for buttons */
   }
 }
+
+/* Scroll Indicator */
+.scroll-indicator {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #F4EEE0;
+  animation: fade-in 2s infinite alternate;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+@keyframes fade-in {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+/* Apple-Style Animation Section */
+.animation-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #d299c2, #8ec5fc);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Showcase Section */
+.showcase {
+  background-color: #2E2B3A;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.showcase h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.achievement {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.achievement:hover {
+  transform: translateY(-5px);
+}
+
+.achievement img, .achievement video {
+  max-width: 100%;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.achievement p {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator {
+      font-size: 1rem;
+  }
+
+  .animation-section {
+      font-size: 1.5rem;
+  }
+
+  .showcase h2 {
+      font-size: 2rem;
+  }
+
+  .achievement {
+    max-width: 65%;
+  }
+  .achievement img {
+      max-width: 75%;
+}
+}
