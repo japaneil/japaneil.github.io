@@ -781,6 +781,12 @@ textarea {
 #response-message.error {
   color: #dc3545;
 }
+.g-recaptcha {
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3%;
+}
 
 /* Responsive Design for Mobile */
 @media screen and (max-width: 768px) {
@@ -794,6 +800,7 @@ textarea {
     transform-origin: center;
     display: flex;
     justify-content: center;
+    padding-bottom: 10%;
 }
 
   h2 {
