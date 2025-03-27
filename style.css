@@ -991,6 +991,18 @@ textarea {
   margin: 0 auto;
 }
 
+.achievementpara {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 .achievement:hover {
   transform: translateY(-5px);
 }
@@ -1006,6 +1018,11 @@ textarea {
 .achievement p {
   font-size: 2rem;
   text-align: center;
+}
+
+.achievementpara p{
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Responsive Fixes */
@@ -1039,6 +1056,11 @@ textarea {
       max-width: 350px;
       padding: 15px;
   }
+  .achievementpara {
+    width: 90%;
+    max-width: 350px;
+    padding: 15px;
+}
 
   .achievement img, .achievement video {
       max-width: 100%;
@@ -1047,6 +1069,10 @@ textarea {
   .achievement p {
       font-size: 1.5rem;
   }
+
+  .achievementpara p {
+    font-size: 1.3rem;
+}
   .scroll-indicator {
     font-size: 1rem;
   }
