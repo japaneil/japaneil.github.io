@@ -282,7 +282,7 @@
     top: 39%;
     left: 38%;
     font-family: 'Old Standard TT', serif;
-    font-size: 5.094rem;
+    font-size: 4.4295652173913rem;
     font-weight: 700;
     color: #F4EEE0;
     transform: translateX(-50%);
@@ -294,7 +294,7 @@
     top: 33%;
     left: 59%;
     font-family: 'Amsterdam', sans-serif;
-    font-size: 5.9065rem;
+    font-size: 5.1360869565217rem;
     color: #F4EEE0;
     transform: translateX(-50%);
   }
@@ -468,39 +468,7 @@
     transform: translateX(-50%);
   }
 }
-@media (max-width: 768px) {
-  .line2 {
-    /* Neil - center left */
-    position: absolute;
-    top: 32%;
-    left: 39%;
-    font-family: 'Old Standard TT', serif;
-    font-size: 7.8369230769231rem;
-    font-weight: 700;
-    color: #F4EEE0;
-    transform: translateX(-50%);
-  }
-  
-  .line3 {
-    /* rora, - center right */
-    position: absolute;
-    top: 24%;
-    left: 59%;
-    font-family: 'Amsterdam', sans-serif;
-    font-size: 9.0869230769231rem;
-    color: #F4EEE0;
-    transform: translateX(-50%);
-  }
-  .social-links-wrapper{
-    position: absolute !important;
-  }
-  .fixed-arrow-hint {
-    position: absolute;
-    z-index: 0 !important;
-    right: 20px;
-    bottom: 20px;
-}
-}
+
 .abnorm {
   color: #F4EEE0;
   font-size: 5%;
