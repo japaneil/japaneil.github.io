@@ -417,7 +417,7 @@
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 100;
+  z-index: 3;
   pointer-events: none;
   opacity: 0.6;
   animation: subtle-bounce 2s infinite;
@@ -1645,7 +1645,7 @@ footer {
   position: fixed;
   left: 30px;
   bottom: 30px;
-  z-index: 100;
+  z-index: 3;
 }
 
 .social-links {
