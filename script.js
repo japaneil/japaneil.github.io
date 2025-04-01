@@ -91,3 +91,20 @@ document.addEventListener("DOMContentLoaded", function() {
         achievement.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
     });
 });
+// Ripple animation on click
+document.querySelectorAll('.social-icon').forEach(icon => {
+    icon.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple-effect';
+      ripple.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
+      ripple.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
+      
+      e.target.appendChild(ripple);
+      
+      setTimeout(() => {
+        ripple.remove();
+      }, 600);
+    });
+  });
