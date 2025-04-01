@@ -257,7 +257,7 @@
   }
   
 }
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .name {
     font-size: 3rem;
   }
@@ -431,7 +431,7 @@
       transform: translateY(-5px);
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .fixed-arrow-hint {
       position: absolute;
       z-index: 0 !important;
@@ -1616,7 +1616,7 @@ textarea {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
   .showcase {
       padding: 20px 5%;
   }
