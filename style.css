@@ -469,6 +469,40 @@
   }
 }
 
+@media (width: 768px) {
+  .line2 {
+    /* Neil - center left */
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    font-family: 'Old Standard TT', serif;
+    font-size: 7.8369230769231rem;
+    font-weight: 700;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  
+  .line3 {
+    /* rora, - center right */
+    position: absolute;
+    top: 23%;
+    left: 59%;
+    font-family: 'Amsterdam', sans-serif;
+    font-size: 9.0869230769231rem;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  .fixed-arrow-hint {
+    position: absolute;
+    z-index: 0 !important;
+    right: 20px;
+    bottom: 20px;
+    transform: scale(0.8);
+}
+.social-links-wrapper{
+  position: absolute !important;
+}
+}
 .abnorm {
   color: #F4EEE0;
   font-size: 5%;
