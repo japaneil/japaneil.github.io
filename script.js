@@ -49,7 +49,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const scrollIndicator = document.querySelector(".scroll-indicator");
     const animationSection = document.querySelector(".animation-section");
     const achievements = document.querySelectorAll(".achievement");
@@ -94,17 +94,17 @@ document.addEventListener("DOMContentLoaded", function() {
 // Ripple animation on click
 document.querySelectorAll('.social-icon').forEach(icon => {
     icon.addEventListener('click', (e) => {
-      e.preventDefault();
-      
-      const ripple = document.createElement('span');
-      ripple.className = 'ripple-effect';
-      ripple.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
-      ripple.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
-      
-      e.target.appendChild(ripple);
-      
-      setTimeout(() => {
-        ripple.remove();
-      }, 600);
+        e.preventDefault();
+
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple-effect';
+        ripple.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
+        ripple.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
+
+        e.target.appendChild(ripple);
+
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
     });
-  });
+});
