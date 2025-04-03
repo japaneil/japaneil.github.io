@@ -590,7 +590,107 @@
 .social-links-wrapper{
   position: absolute !important;
 }
+
+@media (width: 768px) {
+  .line2 {
+    /* Neil - center left */
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    font-family: 'Old Standard TT', serif;
+    font-size: 7.8369230769231rem;
+    font-weight: 700;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  
+  .line3 {
+    /* rora, - center right */
+    position: absolute;
+    top: 23%;
+    left: 59%;
+    font-family: 'Amsterdam', sans-serif;
+    font-size: 9.0869230769231rem;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  .fixed-arrow-hint {
+    position: absolute;
+    z-index: 0 !important;
+    right: 20px;
+    bottom: 20px;
+    transform: scale(0.8);
 }
+.social-links-wrapper{
+  position: absolute !important;
+}
+}}
+
+@media (width: 1440px) {
+  .line2 {
+    /* Neil - center left */
+    position: absolute;
+    top: 26%;
+    left: 35%;
+    font-family: 'Old Standard TT', serif;
+    font-size: 15.89328rem;
+    font-weight: 700;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  
+  .line3 {
+    /* rora, - center right */
+    position: absolute;
+    top: 12%;
+    left: 59%;
+    font-family: 'Amsterdam', sans-serif;
+    font-size: 18.42828rem;
+    color: #F4EEE0;
+    transform: translateX(-50%);
+  }
+  .fixed-arrow-hint {
+    position: absolute;
+    z-index: 0 !important;
+    right: 20px;
+    bottom: 20px;
+    transform: scale(0.8);
+}
+.social-links-wrapper{
+  position: absolute !important;
+}
+.line4 {
+  /* from India. - bottom right */
+  position: absolute;
+  bottom: 10%;
+  right: 12%;
+  font-family: 'Questrial', sans-serif;
+  font-size: 2rem;
+  color: #F4EEE0;
+}
+.bind4 {
+  color: #e0e6f4;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(
+  -225deg,
+  #d299c2 0%,
+  #8ec5fc 29%,
+  #d299c2 67%,
+  #8ec5fc 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  text-align: center;
+}
+}
+
 .abnorm {
   color: #F4EEE0;
   font-size: 5%;
