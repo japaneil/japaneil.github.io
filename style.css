@@ -180,79 +180,6 @@
     text-align: center;
   }
 }
-@media (max-width: 1710px) {
-  .name {
-    font-size: 3rem;
-  }
-  .last-name {
-    font-size: 1.5rem;
-  }
-  .location {
-    font-size: 1.2rem;
-  }
-  .line1 {
-    /* Hi, I am - top left */
-    position: absolute;
-    top: 10%;
-    left: 12%;
-    font-family: 'Questrial', sans-serif;
-    font-size: 2rem;
-    color: #F4EEE0;
-  }
-  .line2 {
-    /* Neil - center left */
-    position: absolute;
-    top: 21%;
-    left: 41%;
-    font-family: 'Old Standard TT', serif;
-    font-size: 15.282rem;
-    font-weight: 700;
-    color: #F4EEE0;
-    transform: translateX(-50%);
-  }
-  
-  .line3 {
-    /* rora, - center right */
-    position: absolute;
-    top: 11%;
-    left: 57%;
-    font-family: 'Amsterdam', sans-serif;
-    font-size: 17.7195rem;
-    color: #F4EEE0;
-    transform: translateX(-50%);
-  }
-  
-  .line4 {
-    /* from India. - bottom right */
-    position: absolute;
-    bottom: 9%;
-    right: 12%;
-    font-family: 'Questrial', sans-serif;
-    font-size: 2rem;
-    color: #F4EEE0;
-  }
-  .bind4 {
-    color: #e0e6f4;
-    font-size: 2rem;
-    font-family: "Josefin Sans", sans-serif;
-    background-image: linear-gradient(
-    -225deg,
-    #d299c2 0%,
-    #8ec5fc 29%,
-    #d299c2 67%,
-    #8ec5fc 100%
-    );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    text-align: center;
-  }
-}
 @media (max-width: 321px) {
   .name {
     font-size: 3rem;
@@ -703,7 +630,7 @@
   .line2 {
     /* Neil - center left */
     position: absolute;
-    top: 22%;
+    top: 26%;
     left: 35%;
     font-family: 'Old Standard TT', serif;
     font-size: 15.89328rem;
@@ -715,7 +642,7 @@
   .line3 {
     /* rora, - center right */
     position: absolute;
-    top: 7%;
+    top: 12%;
     left: 59%;
     font-family: 'Amsterdam', sans-serif;
     font-size: 18.42828rem;
