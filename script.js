@@ -9,7 +9,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     const recaptchaResponse = grecaptcha.getResponse();
 
     if (!recaptchaResponse) {
-        responseMessage.textContent = "⚠️ Please complete the reCAPTCHA verification.";
+        responseMessage.textContent = "Please complete the reCAPTCHA verification.";
         responseMessage.classList.add("error");
         responseMessage.classList.remove("success");
         responseMessage.style.opacity = 1;
@@ -28,21 +28,21 @@ document.getElementById("contact-form").addEventListener("submit", async functio
         });
 
         if (response.ok) {
-            responseMessage.textContent = "✅ Message sent successfully!";
+            responseMessage.textContent = "Message sent successfully!";
             responseMessage.classList.add("success");
             responseMessage.classList.remove("error");
             responseMessage.style.opacity = 1;
             form.reset();
             grecaptcha.reset(); // Reset the reCAPTCHA checkbox
         } else {
-            responseMessage.textContent = "⚠️ Error sending message. Please try again.";
+            responseMessage.textContent = "Error sending message. Please try again.";
             responseMessage.classList.add("error");
             responseMessage.classList.remove("success");
             responseMessage.style.opacity = 1;
         }
     } catch (error) {
         console.error("Form submission error:", error);
-        responseMessage.textContent = "❌ Network error. Please check your connection.";
+        responseMessage.textContent = "Network error. Please check your connection.";
         responseMessage.classList.add("error");
         responseMessage.classList.remove("success");
         responseMessage.style.opacity = 1;

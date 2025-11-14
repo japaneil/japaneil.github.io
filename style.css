@@ -2384,3 +2384,51 @@ footer {
     box-sizing: border-box !important;
   }
 }
+
+/* ==========================
+   Section containment fixes
+   - Ensure every major section contains absolutely-positioned children
+   - Prevent visual bleeding between stacked sections on small viewports
+   - Make sure sections respect viewport height and layout flow
+   ========================== */
+section,
+.full,
+.intro-section,
+.showcase,
+.resources,
+.snap-section {
+  position: relative; /* establish a containing block for absolutely positioned descendants */
+  overflow: hidden;   /* clip any positioned children so they can't visually bleed into adjacent sections */
+  box-sizing: border-box;
+  /* keep consistent viewport sizing */
+  min-height: 100vh;
+}
+
+/* Defensive: undo any older rules that forced the contact container to be absolute on mobile */
+.contact-container {
+  position: static !important;
+}
+
+/* Ensure snap-inner/snap-contact scale responsively and never force horizontal overflow */
+.snap-inner,
+.resources-inner,
+.resource-card,
+.snap-contact {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra safety: clip any oversized absolutely-positioned helper elements (like decorative lines) */
+.absolute-match,
+.fixed-arrow-hint {
+  pointer-events: auto;
+  will-change: transform;
+}
+
+/* Final small-screen tune: reduce large type/absolute offsets that might overlap on very short viewports */
+@media (max-height: 640px) and (max-width: 420px) {
+  .stationary-quote .quote-text { font-size: clamp(1.25rem, 4.6vw, 2.6rem); line-height: 1.35; }
+  .quote-source { bottom: 2.4vh; }
+  .hero-logo { min-height: 55vh; }
+}
