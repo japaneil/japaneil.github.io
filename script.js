@@ -1,3 +1,23 @@
+(function () {
+    const root = document.documentElement;
+
+    function setViewportVars() {
+        const vh = window.innerHeight * 0.01;
+        const vw = window.innerWidth * 0.01;
+        root.style.setProperty('--vh', `${vh}px`);
+        root.style.setProperty('--vw', `${vw}px`);
+    }
+
+    let resizeFrame;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeFrame);
+        resizeFrame = setTimeout(setViewportVars, 120);
+    });
+    window.addEventListener('orientationchange', setViewportVars);
+
+    setViewportVars();
+})();
+
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
     event.preventDefault(); // Prevent default form submission
 

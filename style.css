@@ -20,6 +20,8 @@
   --accent-primary: #d299c2;
   --accent-secondary: #8ec5fc;
   --font-base: 'Google Sans Code', 'DM Mono', 'IBM Plex Mono', 'Questrial', sans-serif;
+  --vh: 1vh;
+  --vw: 1vw;
   /* Fluid type & spacing scale */
   --fluid-vmin: min(100vw, 100vh);
   --space-xs: clamp(0.35rem, 0.6vw, 0.75rem);
@@ -1720,6 +1722,36 @@ textarea {
   }
 }
 
+@media (orientation: landscape) and (max-height: 600px) {
+  .full, .intro-section, .showcase, .resources, .snap-section {
+    padding-top: clamp(1rem, 4vh, 2.25rem);
+    padding-bottom: clamp(1rem, 4vh, 2.25rem);
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  .stationary-quote {
+    align-items: flex-start;
+    padding-top: clamp(1.5rem, 4vh, 2.5rem);
+    padding-bottom: clamp(3rem, 10vh, 4rem);
+  }
+
+  .quote-source {
+    bottom: clamp(0.75rem, 3vh, 1.5rem);
+  }
+
+  .resources-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: min(1100px, 100%);
+  }
+
+  .snap-contact {
+    max-height: 78vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: clamp(0.75rem, 2vh, 1.25rem);
+  }
+}
+
 /* legacy marquee/keyframe/fade rules removed to keep stylesheet minimal */
 
 .showcase h4 {
@@ -1963,10 +1995,9 @@ textarea {
 
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-lg);
-  width: 100%;
-  max-width: 1100px;
+  width: min(1100px, 100%);
   margin-top: var(--space-lg);
   align-items: stretch;
 }
@@ -2047,7 +2078,7 @@ textarea {
 
 /* Responsive: fewer columns */
 @media (max-width: 1000px) {
-  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .resources-grid { gap: var(--space-md); }
 }
 @media (max-width: 540px) {
   /* Stack cards as a vertical list on small phones */
@@ -2065,7 +2096,7 @@ textarea {
 
 /* Additional responsive tuning for Resources */
 @media (max-width: 1000px) {
-  .resources-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .resources-grid { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: var(--space-md); }
   .resource-card { min-height: 160px; padding: 1.25rem; }
 }
 
@@ -2325,7 +2356,7 @@ footer {
 
 /* New snap target section styling */
 .snap-section {
-  min-height: clamp(85vh, 100vh, 115vh);
+  min-height: clamp(85vh, calc(var(--vh, 1vh) * 100), 115vh);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2343,6 +2374,7 @@ footer {
 .snap-contact {
   margin: var(--space-md) auto 0;
   max-width: 820px;
+  width: min(100%, 820px);
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -2454,8 +2486,8 @@ footer {
 @media (max-width: 420px) {
   .showcase, .resources, .snap-section, .intro-section, .full {
     /* Make each section exactly viewport-height and clip overflow so the next section can't peek */
-    height: 100vh !important;
-    min-height: 100vh !important;
+    height: calc(var(--vh, 1vh) * 100) !important;
+    min-height: calc(var(--vh, 1vh) * 100) !important;
     overflow: hidden !important;
     padding-top: env(safe-area-inset-top, 12px) !important;
     padding-bottom: env(safe-area-inset-bottom, 12px) !important;
@@ -2532,7 +2564,7 @@ section,
   overflow: hidden;   /* clip any positioned children so they can't visually bleed into adjacent sections */
   box-sizing: border-box;
   /* keep consistent viewport sizing */
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* Defensive: undo any older rules that forced the contact container to be absolute on mobile */
