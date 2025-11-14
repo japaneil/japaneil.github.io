@@ -90,6 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
         achievement.style.transform = "translateY(30px)";
         achievement.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
     });
+
+    // Transition content removed per user request
 });
 // Ripple animation on click
 document.querySelectorAll('.social-icon').forEach(icon => {
@@ -107,4 +109,69 @@ document.querySelectorAll('.social-icon').forEach(icon => {
             ripple.remove();
         }, 600);
     });
+});
+
+// (legacy marquee JS removed)
+
+// Video lightbox modal — initialize after DOM is ready so modal markup exists
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('video-modal');
+    const iframe = document.getElementById('video-iframe');
+    const openers = document.querySelectorAll('.js-open-video');
+    const closeButtons = modal ? modal.querySelectorAll('[data-close]') : [];
+    let lastActive = null;
+
+    function openModal(src, opener) {
+        if (!modal) return;
+        lastActive = opener || document.activeElement;
+        modal.setAttribute('aria-hidden', 'false');
+        // set iframe src (add autoplay=1) so video starts immediately
+        iframe.src = src + (src.includes('?') ? '&autoplay=1' : '?autoplay=1');
+        // focus the close button
+        const close = modal.querySelector('.video-modal__close');
+        if (close) close.focus();
+        document.addEventListener('keydown', onKeyDown);
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        modal.setAttribute('aria-hidden', 'true');
+        // remove src to stop playback
+        iframe.src = '';
+        document.removeEventListener('keydown', onKeyDown);
+        if (lastActive && typeof lastActive.focus === 'function') lastActive.focus();
+    }
+
+    function onKeyDown(e) {
+        if (e.key === 'Escape') closeModal();
+        // simple trap: keep focus inside modal when open
+        if (e.key === 'Tab' && modal.getAttribute('aria-hidden') === 'false') {
+            const focusable = modal.querySelectorAll('a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault(); last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault(); first.focus();
+            }
+        }
+    }
+
+    openers.forEach(op => {
+        op.addEventListener('click', function (e) {
+            e.preventDefault();
+            const src = this.getAttribute('data-video-src');
+            openModal(src, this);
+        });
+    });
+
+    closeButtons.forEach(btn => btn.addEventListener('click', function (e) { e.preventDefault(); closeModal(); }));
+
+    // close when clicking overlay
+    if (modal) {
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal.querySelector('.video-modal__overlay')) closeModal();
+        });
+    }
 });

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/jpg" href="my_photo.png"/>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700&family=Questrial&display=swap" rel="stylesheet">
@@ -13,26 +13,14 @@
     <meta name="author" content="Neil Arora">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neil Arora.</title>
+    <!-- Google reCAPTCHA v2 -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="bodnorm">
     <div class="full">
-        <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-        <label for="menu-icon"></label>
-        <nav class="nav">      
-            <ul class="pt-5">
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://logs.neilarora.in/">Devlogs</a></li>
-            </ul>
-        </nav>
-        <div class="fixed-arrow-hint">
-            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7 10L12 15L17 10" stroke="#F4EEE0" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
         <div class="social-links-wrapper">
             <div class="social-links">
-                <a href="mailto:neilarora2008@gmail.com" class="social-icon" data-tooltip="Email">
+                <a href="mailto:contact@neilarora.in" class="social-icon" data-tooltip="Email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4EEE0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
@@ -52,55 +40,90 @@
                 </a>
             </div>
         </div>
-        <div class="absolute-match">
-            <div class="line1">Hi, I am</div>
-            <div class="line2">Neil</div>
-            <div class="line3">Arora,</div>
-            <div class="line4">from <b class="bind4">India.</b></div>
+        <div class="hero-logo">
+            <img src="assets/name.png" alt="Neil Arora" />
         </div>
     </div>
 
-<!-- Scroll Indicator -->
-<!-- <div class="scroll-indicator">↓ Scroll Down to View More ↓</div> -->
-
-<!-- Apple-Style Animation Section -->
-<section class="animation-section">
-    <div class="animation-content">
-        <h2></h2>
-    </div>
-</section>
-
-<!-- Achievements Showcase -->
-<section class="showcase">
-    <h4><b class="bind">My Achievements</b></h4>
-    <div class="achievementpara"><p>Click on the Placeholders to View More</p></div>
-    <div class="showcase-grid">
-        <div class="achievement">
-            <a href="assets/Media Coverage-Pariksha Pe Charcha Neil Arora.pdf" target="_blank">
-            <div class="image">
-                <img src="assets/preview3.png" alt="Portfolio Preview">
+    <!-- Introduction Section -->
+    <div class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <p>I am a 17 year old IB Diploma student deeply focused on Engineering, Physics, Philosophy, and Environmental Sociology. I started engineering in the 4th Grade and since then I have explored software, hardware, and systems design and now I work mainly in mechatronics. I build with intent, learn fast, and do not see age as a limit. I am currently exploring the connection between engineering and entrepreneurship while researching environmental sociology at a premier institution in India and developing my theory on a reverse human-environment CHANS feedback loop. I want to create work that is meaningful and precise and that reflects what I value.</p>
             </div>
-            </a>
-            <p>Media Coverage</p>
-        </div>
-        <div class="achievement">
-            <iframe width="100%" height="250rem" src="https://www.youtube.com/embed/AJc9zXeCifE?si=zJAt1gsKaUVvzb8j&amp;start=118" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>National News Interview</p>
-        </div>
-        <div class="achievement">
-            <a href="assets/Internship Letters Neil Arora.pdf" target="_blank">
-                <img src="assets/preview2.png" alt="Portfolio Preview">
-            </a>
-            <p>Internship Letters</p>
-        </div>
-        <div class="achievement">
-            <a href="assets/Portfolio.pdf" target="_blank">
-                <img src="assets/preview.png" alt="Portfolio Preview">
-            </a>
-            <p>Portfolio</p>
         </div>
     </div>
-</section>
+
+        <!-- Transition Section removed per request -->
+
+        <!-- Showcase: stationary quote per request -->
+        <section class="showcase">
+            <div class="showcase-quote" aria-label="Quote showcase">
+                <div class="stationary-quote" aria-hidden="false">
+                    <blockquote class="quote-text">There are no two words in the English language more harmful than 'good job'.</blockquote>
+                    <div class="quote-source">— Whiplash (2014)</div>
+                </div>
+            </div>
+        </section>
+        <!-- Resources / Access Section -->
+        <section id="resources" class="resources">
+            <div class="resources-inner">
+                <h2 class="resources-title">Access</h2>
+                <p class="resources-sub">Portfolio, internship letters, media coverage, and my interview.</p>
+
+                <div class="resources-grid">
+                    <a class="resource-card" href="assets/Portfolio.pdf" target="_blank" rel="noopener" aria-labelledby="r-portfolio" role="link">
+                        <div class="resource-head"><span id="r-portfolio" class="resource-label">Portfolio</span></div>
+                        <div class="resource-desc">Projects, competitions, events, internships, and publications - all in one.</div>
+                        <span class="resource-cta">Open</span>
+                    </a>
+
+                    <a class="resource-card" href="assets/Internship%20Letters.pdf" target="_blank" rel="noopener" aria-labelledby="r-intern" role="link">
+                        <div class="resource-head"><span id="r-intern" class="resource-label">Internship Letters</span></div>
+                        <div class="resource-desc">Scanned recommendation and offer letters from previous internships.</div>
+                        <span class="resource-cta">Open</span>
+                    </a>
+
+                    <a class="resource-card" href="assets/Media%20Coverage.pdf" target="_blank" rel="noopener" aria-labelledby="r-media" role="link">
+                        <div class="resource-head"><span id="r-media" class="resource-label">Media Coverage</span></div>
+                        <div class="resource-desc">Featured selected press clippings.</div>
+                        <span class="resource-cta">Open</span>
+                    </a>
+
+                    <a class="resource-card" href="https://www.youtube.com/watch?v=AJc9zXeCifE&start=118" target="_blank" rel="noopener" aria-labelledby="r-interview" role="link">
+                        <div class="resource-head"><span id="r-interview" class="resource-label">Interview</span></div>
+                        <div class="resource-desc">My national news interview on YouTube.</div>
+                        <span class="resource-cta">Watch</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+                            <!-- Portfolio Snap Section: new scroll-snap target (contains contact form) -->
+                            <section id="portfolio-snap" class="snap-section" aria-label="Contact and portfolio snap section">
+                                <div class="snap-inner">
+                                    <h2 class="snap-title">Get in touch</h2>
+                                    <p class="snap-desc">Send a short message — I read everything.</p>
+
+                                    <form id="contact-form" action="https://formspree.io/f/meoevewa" method="POST" class="snap-contact">
+                                        <div class="input-group">
+                                            <input type="text" name="name" placeholder="Your name" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <input type="email" name="email" placeholder="Your email" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <textarea name="message" placeholder="Your message" required></textarea>
+                                        </div>
+
+                                        <!-- reCAPTCHA v2 Checkbox -->
+                                        <div class="g-recaptcha" data-sitekey="6LeWkNsqAAAAAPW3JgEsRa1Laio000EsTW-kUseG"></div>
+
+                                        <button type="submit" class="btn">Send Message</button>
+                                        <p id="response-message"></p>
+                                    </form>
+                                </div>
+                            </section>
 
 <script src="script.js"></script>
 </body>
