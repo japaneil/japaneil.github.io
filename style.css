@@ -2385,6 +2385,72 @@ footer {
   }
 }
 
+/* Force full-section clipping on narrow phones to avoid peek-through of next snap target */
+@media (max-width: 420px) {
+  .showcase, .resources, .snap-section, .intro-section, .full {
+    /* Make each section exactly viewport-height and clip overflow so the next section can't peek */
+    height: 100vh !important;
+    min-height: 100vh !important;
+    overflow: hidden !important;
+    padding-top: env(safe-area-inset-top, 12px) !important;
+    padding-bottom: env(safe-area-inset-bottom, 12px) !important;
+  }
+
+  /* Ensure inner containers use the full section height and center content */
+  .snap-inner, .resources-inner, .showcase-quote {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  /* Keep the contact card scrollable within itself if content is taller */
+  .snap-contact {
+    margin-top: 0 !important;
+    max-height: calc(100% - 4rem) !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Small tweak: reduce large offsets that could push content out of view */
+  .stationary-quote { padding: 2vh 1rem !important; }
+}
+
+/* Make the name/logo PNG span the full viewport width on phones */
+@media (max-width: 600px) {
+  /* Make the hero/logo a prominent, centered focus while leaving breathing room */
+  .hero-logo {
+    width: 100%;
+    max-width: 92vw; /* keep side margins visible */
+    margin: 3vh auto; /* vertical breathing room and center */
+    padding: 2vh 0;
+    min-height: 46vh; /* large, but not full-bleed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .hero-logo img {
+    width: clamp(260px, 72vw, 96vw); /* big and responsive, but leave small margins */
+    max-width: 96vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+}
+
+
+/* Extra precise tuning for very narrow tall phones (e.g., 390x844) */
+@media (max-width: 390px) and (max-height: 900px) {
+  .hero-logo { min-height: 40vh !important; }
+  .stationary-quote .quote-text { font-size: clamp(1rem, 4.6vw, 1.8rem) !important; }
+  .snap-title { font-size: clamp(1.2rem, 4.4vw, 1.6rem) !important; }
+}
+
 /* ==========================
    Section containment fixes
    - Ensure every major section contains absolutely-positioned children
@@ -2432,3 +2498,55 @@ section,
   .quote-source { bottom: 2.4vh; }
   .hero-logo { min-height: 55vh; }
 }
+
+/* ==================================================
+   Small-screen typographic and layout safety overrides
+   - Reduce aggressive global paragraph sizing and floats
+   - Shrink images and hero area on narrow viewports
+   - Reduce section min-height so short viewports don't clip content
+   ================================================== */
+
+/* Reset surprising global paragraph sizing on small screens */
+@media (max-width: 1024px) {
+  body p {
+    font-size: clamp(0.9rem, 2.2vw, 1rem) !important;
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+    line-height: 1.6 !important;
+  }
+  .intro-text p {
+    font-size: clamp(0.95rem, 2.4vw, 1.25rem) !important;
+    line-height: 1.75 !important;
+    margin: 0 !important;
+  }
+  .achievement p, .achievementpara p {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem) !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Tighter rules for narrow phones to avoid clipping top/bottom */
+@media (max-width: 425px) {
+  /* Reduce hero/logo height so subsequent sections start within the viewport */
+  .hero-logo { min-height: 45vh; }
+  .hero-logo img { width: clamp(140px, 58vw, 320px); height: auto; }
+
+  /* Reduce global paragraph sizing further */
+  body p { font-size: clamp(0.82rem, 3.6vw, 0.95rem) !important; }
+  .intro-text p { font-size: clamp(0.85rem, 3.8vw, 1rem) !important; line-height: 1.6 !important; }
+
+  /* Allow sections to be slightly shorter than 100vh on short displays so content isn't clipped
+     while still preserving scroll-snap alignment. */
+  .full, .showcase, .resources, .snap-section { min-height: calc(100vh - 72px); }
+
+  /* Avoid overly large absolute offsets for decorative lines that might push past the viewport */
+  .line2, .line3, .line4 { max-height: 50vh; }
+}
+
+@media (max-width: 320px) {
+  /* Further reduce quote and intro text so they fit on very small displays */
+  .stationary-quote .quote-text { font-size: clamp(1rem, 5.2vw, 2rem); line-height: 1.35; }
+  .intro-text p { font-size: clamp(0.78rem, 4.6vw, 0.92rem) !important; }
+  .full, .showcase, .resources, .snap-section { min-height: calc(100vh - 64px); padding-left: 0.9rem; padding-right: 0.9rem; }
+}
+
