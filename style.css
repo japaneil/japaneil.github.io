@@ -2520,10 +2520,10 @@ footer {
   /* Make the hero/logo a prominent, centered focus while leaving breathing room */
   .hero-logo {
     width: 100%;
-    max-width: 92vw; /* keep side margins visible */
-    margin: 3vh auto; /* vertical breathing room and center */
-    padding: 2vh 0;
-    min-height: 46vh; /* large, but not full-bleed */
+    max-width: 96vw; /* minimal side margins */
+    margin: 2vh auto 4vh;
+    padding: 3vh 0;
+    min-height: 52vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2531,8 +2531,8 @@ footer {
   }
 
   .hero-logo img {
-    width: clamp(260px, 72vw, 96vw); /* big and responsive, but leave small margins */
-    max-width: 96vw;
+    width: clamp(300px, 85vw, 100vw); /* larger focus with slight edge breathing room */
+    max-width: 100vw;
     height: auto;
     display: block;
     margin: 0 auto;
