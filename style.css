@@ -2624,9 +2624,24 @@ section,
 
 /* Tighter rules for narrow phones to avoid clipping top/bottom */
 @media (max-width: 425px) {
-  /* Reduce hero/logo height so subsequent sections start within the viewport */
-  .hero-logo { min-height: 45vh; }
-  .hero-logo img { width: clamp(140px, 58vw, 320px); height: auto; }
+  /* Ensure the hero/logo has comfortable side breathing room on very small screens */
+  .hero-logo {
+    min-height: 50vh;
+    margin: 0 auto 1vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    box-sizing: border-box;
+  }
+
+  /* Make the logo fit inside the viewport with side margins (not edge-to-edge) */
+  .hero-logo img {
+    width: clamp(240px, 84vw, 92vw);
+    max-width: 92vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
 
   /* Reduce global paragraph sizing further */
   body p { font-size: clamp(0.82rem, 3.6vw, 0.95rem) !important; }
