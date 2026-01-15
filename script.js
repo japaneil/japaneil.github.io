@@ -116,14 +116,17 @@ document.addEventListener("DOMContentLoaded", function () {
 // Ripple animation on click
 document.querySelectorAll('.social-icon').forEach(icon => {
     icon.addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault(); // Removed to allow navigation
 
         const ripple = document.createElement('span');
         ripple.className = 'ripple-effect';
-        ripple.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
-        ripple.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
 
-        e.target.appendChild(ripple);
+        // Use currentTarget to ensure we reference the anchor tag itself
+        const rect = e.currentTarget.getBoundingClientRect();
+        ripple.style.left = `${e.clientX - rect.left}px`;
+        ripple.style.top = `${e.clientY - rect.top}px`;
+
+        e.currentTarget.appendChild(ripple);
 
         setTimeout(() => {
             ripple.remove();
